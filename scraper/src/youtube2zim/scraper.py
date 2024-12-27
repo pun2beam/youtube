@@ -34,6 +34,7 @@ from zimscraperlib.inputs import compute_descriptions
 from zimscraperlib.video.presets import (
     VideoMp4High,
     VideoMp4Low,
+    VideoMp4Custom,
     VideoWebmHigh,
     VideoWebmLow,
 )
@@ -128,7 +129,11 @@ class Youtube2Zim:
         self.dateafter = dateafter
 
         # video-encoding info
-        self.video_format = video_format
+        if video_format == "mp4c"
+            self.custom_format = True
+            self.video_format = "mp4"
+        else
+            self.video_format = video_format
         self.low_quality = low_quality
 
         # options & zim params
@@ -693,7 +698,7 @@ class Youtube2Zim:
         """download the video from cache/youtube and return True if successful"""
 
         preset = {
-            "mp4": VideoMp4Low if self.low_quality else VideoMp4High,
+            "mp4": VideoMp4Custom if self.custom_format else VideoMp4Low if self.low_quality else VideoMp4High,
             "webm": VideoWebmLow if self.low_quality else VideoWebmHigh,
         }.get(self.video_format)
         if not preset:
