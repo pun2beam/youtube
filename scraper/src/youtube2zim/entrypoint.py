@@ -36,7 +36,7 @@ def main():
     parser.add_argument(
         "--format",
         help="Format to download/transcode video to. webm is smaller",
-        choices=["mp4", "webm"],
+        choices=["mp4", "webm", "mp4c"],
         default="webm",
         dest="video_format",
     )
