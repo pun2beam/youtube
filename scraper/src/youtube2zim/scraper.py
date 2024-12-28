@@ -132,7 +132,7 @@ class Youtube2Zim:
         if video_format == "mp4c":
             self.custom_format = True
             self.video_format = "mp4"
-        else
+        else:
             self.video_format = video_format
         self.low_quality = low_quality
 
