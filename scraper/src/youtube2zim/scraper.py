@@ -129,7 +129,7 @@ class Youtube2Zim:
         self.dateafter = dateafter
 
         # video-encoding info
-        if video_format == "mp4c"
+        if video_format == "mp4c":
             self.custom_format = True
             self.video_format = "mp4"
         else
